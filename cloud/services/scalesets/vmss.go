@@ -148,8 +148,8 @@ func (s *Service) Reconcile(ctx context.Context, spec interface{}) error {
 						{
 							Name: to.StringPtr(vmssSpec.Name + "-netconfig"),
 							VirtualMachineScaleSetNetworkConfigurationProperties: &compute.VirtualMachineScaleSetNetworkConfigurationProperties{
-								Primary:            to.BoolPtr(true),
-								EnableIPForwarding: to.BoolPtr(true),
+								Primary: to.BoolPtr(true),
+								// EnableIPForwarding: to.BoolPtr(true),
 								IPConfigurations: &[]compute.VirtualMachineScaleSetIPConfiguration{
 									{
 										Name: to.StringPtr(vmssSpec.Name + "-ipconfig"),
